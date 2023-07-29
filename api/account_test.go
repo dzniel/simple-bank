@@ -36,8 +36,8 @@ func TestCreateAccountAPI(t *testing.T) {
 			buildStubs: func(store *mockdb.MockStore) {
 				arg := db.CreateAccountParams{
 					Owner:    account.Owner,
-					Currency: account.Currency,
 					Balance:  0,
+					Currency: account.Currency,
 				}
 
 				store.EXPECT().
@@ -59,8 +59,8 @@ func TestCreateAccountAPI(t *testing.T) {
 			buildStubs: func(store *mockdb.MockStore) {
 				arg := db.CreateAccountParams{
 					Owner:    account.Owner,
-					Currency: account.Currency,
 					Balance:  0,
+					Currency: account.Currency,
 				}
 
 				store.EXPECT().
@@ -313,7 +313,7 @@ func TestListAccountAPI(t *testing.T) {
 
 func randomAccount() db.Account {
 	return db.Account{
-		ID:       util.RandomInt(1, 100),
+		ID:       util.RandomInt(1, 10000),
 		Owner:    util.RandomOwner(),
 		Balance:  util.RandomBalance(),
 		Currency: util.RandomCurrency(),

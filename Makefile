@@ -37,7 +37,7 @@ sqlc:
 	docker run --rm -v "D:/Documents/backend-master-class/simple-bank:/src" -w /src kjconroy/sqlc generate
 
 test:
-	go test -v -cover ./...
+	go test -v -cover -short ./...
 
 server:
 	go run main.go
